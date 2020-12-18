@@ -71,6 +71,8 @@ def delete_some_likes(some=True):
              if (query_yes_no("Delete the folowing like of the tweet: " + like.text, "no")) or (not some):
                  print("now deleting the like")
                  api.destroy_favorite(like.id)
+                 unliked += 1
+
 
     finally:
         print("ups")
